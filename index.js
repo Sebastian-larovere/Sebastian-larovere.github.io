@@ -2,20 +2,38 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("¡Sitio web de Sebastián Larovere listo y cargado! 🚀");
 
-    // Seleccionamos automáticamente los 4 cuadrados (tarjetas) de servicios
-    const tarjetasServicios = document.querySelectorAll("main > div > div");
+    // Tabs behavior
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-    // Añadimos interactividad a cada tarjeta
+    function activateTab(targetId, button) {
+        tabButtons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        tabContents.forEach(c => { c.classList.remove('active'); c.setAttribute('hidden', ''); });
+
+        button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
+
+        const target = document.querySelector(targetId);
+        if (target) {
+            target.classList.add('active');
+            target.removeAttribute('hidden');
+        }
+    }
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.tabTarget;
+            activateTab(target, btn);
+        });
+    });
+
+    // Seleccionamos las tarjetas dentro de la pestaña Products para la interactividad
+    const tarjetasServicios = document.querySelectorAll('#products .tarjeta-servicio');
+
     tarjetasServicios.forEach((tarjeta) => {
-        // Cambiar el cursor a una mano para que el usuario sepa que puede hacer clic
-        tarjeta.style.cursor = "pointer";
-
-        // Evento cuando el usuario hace clic en un servicio
-        tarjeta.addEventListener("click", () => {
-            // Obtenemos el texto del título (H3) de la tarjeta seleccionada
-            const nombreServicio = tarjeta.querySelector("h3").innerText;
-            
-            // Mostramos un mensaje personalizado
+        tarjeta.style.cursor = 'pointer';
+        tarjeta.addEventListener('click', () => {
+            const nombreServicio = tarjeta.querySelector('h3').innerText;
             alert(`¡Gracias por tu interés en ${nombreServicio}! Muy pronto habrá más detalles disponibles sobre este servicio.`);
         });
     });

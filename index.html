@@ -11,46 +11,79 @@
 <body>
 
     <main>
-        <h1>Visión & Análisis de Mercado</h1>
-        <p class="subtitulo">Transformo datos complejos en información estratégica e inteligente para la toma de decisiones económicas.</p>
-        
-        <div class="grid-servicios">
-            
-            <div class="tarjeta-servicio">
-                <div class="icono-contenedor">
-                    <img src="Market Analysis.png" alt="Market Analysis">
-                </div>
-                <h3>Market Analysis</h3>
-            </div>
+        <nav class="tabs" role="tablist" aria-label="Main tabs">
+            <button class="tab-button active" data-tab-target="#home" role="tab" aria-selected="true">Home</button>
+            <button class="tab-button" data-tab-target="#products" role="tab" aria-selected="false">Products</button>
+            <button class="tab-button" data-tab-target="#contact" role="tab" aria-selected="false">Contact</button>
+        </nav>
 
-            <div class="tarjeta-servicio">
-                <div class="icono-contenedor">
-                    <img src="Business Analytics.png" alt="Business Analytics">
-                </div>
-                <h3>Business Analytics</h3>
+        <section id="home" class="tab-content active">
+            <h1>Sebastián Larovere | Visión & Análisis de Mercado</h1>
+            <p class="subtitulo">Transformo datos complejos en información estratégica e inteligente para la toma de decisiones económicas.</p>
+            <div class="portada-contenedor">
+                <img src="Home.png" alt="Portada" class="portada-img">
             </div>
+            <div class="blue-section">
+                <p class="subtitulo"> ¿Por que elegir a Sebastián Larovere para su proyecto?</p>
+                <p class="descripcion"> Por medio de un enfoque que fusiona la rigurosidad económica con la analítica estratégica, consigo que los líderes y las organizaciones dejen de acumular información y comiencen a accionar a través de ella. En el entorno actual, el valor real no está en la cantidad de datos que poseemos, sino en la claridad, el rumbo y las decisiones que tomamos a partir de ellos.</p>
+                <p class="subtitulo"> El dato es el mapa</p>
+                <p class="descripcion"> Trabajar conmigo significa estructurar un plan de vuelo donde cada métrica responde a un objetivo mayor. Mi metodología se centra en transformar la incertidumbre en previsibilidad mediante dos pilares:
 
-            <div class="tarjeta-servicio">
-                <div class="icono-contenedor">
-                    <img src="Data Reporting.png" alt="Data Reporting">
-                </div>
-                <h3>Data Reporting</h3>
+Planificación y Propósito: Todo proyecto empresarial o profesional es, en el fondo, un proyecto de vida. Si no está bien planificado desde sus cimientos y alineado con un propósito claro, la estructura pierde efectividad. Diseño estrategias que aseguran que el día a día del negocio sostenga esa visión a largo plazo.
+
+De la Información a la Acción: Desfallecer en un mar de métricas es fácil. Mi rol es limpiar el ruido, conectar las variables clave (como pricing, presupuestos y eficiencia operativa) e instalar prácticas organizacionales que generen resultados medibles.
+
+Desarrollo sistemas de gestión y análisis que optimizan la toma de decisiones, mejorando la velocidad de implementación de las soluciones y garantizando que cada paso estratégico esté sólidamente respaldado.</p>
             </div>
+        </section>
 
-            <div class="tarjeta-servicio">
-                <div class="icono-contenedor">
-                    <img src="Financial Analysis.png" alt="Financial Analysis">
+        <section id="products" class="tab-content" hidden>
+            <div class="grid-servicios">
+                
+                <div class="tarjeta-servicio">
+                    <div class="icono-contenedor">
+                        <img src="Market Analysis.png" alt="Market Analysis">
+                    </div>
+                    <h3>Market Analysis</h3>
                 </div>
-                <h3>Financial Analysis</h3>
-            </div>
 
-        </div>
+                <div class="tarjeta-servicio">
+                    <div class="icono-contenedor">
+                        <img src="Business Analytics.png" alt="Business Analytics">
+                    </div>
+                    <h3>Business Analytics</h3>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <div class="icono-contenedor">
+                        <img src="Data Reporting.png" alt="Data Reporting">
+                    </div>
+                    <h3>Data Reporting</h3>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <div class="icono-contenedor">
+                        <img src="Financial Analysis.png" alt="Financial Analysis">
+                    </div>
+                    <h3>Financial Analysis</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content" hidden>
+            <h2>Contact</h2>
+            <div class="contact-badge">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="sebastián-larovere-a7a3a2152" data-version="v1">
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="sebastián-larovere-a7a3a2152" data-version="v1">
-        </div>
     </footer>
 
+    <script src="index.js"></script>
+
 </body>
-</html>
+</html>>>>

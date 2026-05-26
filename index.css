@@ -117,3 +117,77 @@ footer {
     background-color: var(--fondo-tarjeta);
     border-top: 1px solid var(--borde-tarjeta);
 }
+
+/* Tabs styling */
+.tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.tab-button {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 10px 18px;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--texto-secundario);
+    transition: all 0.18s ease;
+}
+
+.tab-button:hover {
+    transform: translateY(-2px);
+}
+
+.tab-button.active {
+    background: var(--color-acento);
+    color: white;
+    border-color: rgba(2,132,199,0.15);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.portada-contenedor {
+    max-width: 900px;
+    margin: 24px auto 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--sombra-premium);
+}
+
+.portada-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Blue section container */
+.blue-section {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    border-radius: var(--borde-redondo);
+    padding: 40px 30px;
+    margin: 30px 0;
+    color: white;
+    box-shadow: 0 10px 30px rgba(2, 132, 199, 0.15);
+}
+
+.blue-section .subtitulo {
+    color: #ffffff;
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+}
+
+.blue-section .descripcion {
+    color: #e0e7ff;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
